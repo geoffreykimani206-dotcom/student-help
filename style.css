@@ -1,0 +1,239 @@
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: #243247;
+    background: #f4f7fb;
+}
+
+a {
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* HEADER */
+header {
+    background: #102a43;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* NAVIGATION */
+nav {
+    background: #243b53;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #48cae4;
+    background: #102a43;
+}
+
+/* MAIN CONTENT */
+main {
+    width: min(100% - 32px, 1100px);
+    margin: 30px auto;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #102a4310;
+    scroll-margin-top: 20px;
+}
+
+section h2 {
+    color: #102a43;
+    margin-bottom: 15px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 65px 30px;
+    background: #e4f4fa;
+}
+
+.hero h2 {
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 24px;
+}
+
+/* BUTTONS */
+.button {
+    display: inline-block;
+    background: #087e8b;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background: #065e68;
+}
+
+/* SERVICES AND PROJECTS GRID */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+/* CARDS */
+.service-card {
+    padding: 24px;
+    border: 1px solid #dce5ed;
+    border-radius: 12px;
+    background: #fbfdff;
+    box-shadow: 0 4px 12px rgba(16, 42, 67, 0.06);
+    text-align: left;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(16, 42, 67, 0.12);
+}
+
+.service-card h3 {
+    color: #087e8b;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.service-card p {
+    margin-bottom: 12px;
+}
+
+/* PROJECT SECTION */
+.projects {
+    text-align: center;
+}
+
+.section-description {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #5b6b7c;
+}
+
+.projects .service-card span {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 10px;
+    background: #e4f4fa;
+    color: #087e8b;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.project-links {
+    margin-top: 18px;
+}
+
+.project-links a {
+    display: inline-block;
+    background: #087e8b;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.project-links a:hover {
+    background: #065e68;
+}
+
+/* WHATSAPP */
+.whatsapp-button {
+    background: #25D366;
+    color: white;
+}
+
+.whatsapp-button:hover {
+    background: #128C7E;
+}
+
+/* FOOTER */
+footer {
+    background: #102a43;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* TABLETS */
+@media (max-width: 850px) {
+    .service-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    main {
+        width: calc(100% - 20px);
+        margin: 15px auto;
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 8px;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+}
